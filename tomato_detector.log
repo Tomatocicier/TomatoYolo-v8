@@ -1,0 +1,654 @@
+2025-04-19 11:47:06,507 - TomatoDetector.Main - INFO - 番茄检测应用程序启动
+2025-04-19 11:47:06,549 - TomatoDetector.Window - INFO - 初始化番茄检测器窗口
+2025-04-19 11:47:06,550 - TomatoDetector.Window - DEBUG - UI初始化
+2025-04-19 11:47:06,563 - TomatoDetector.Window - DEBUG - UI初始化完成
+2025-04-19 11:47:06,935 - TomatoDetector.Main - INFO - 应用程序主窗口显示
+2025-04-19 11:47:11,145 - TomatoDetector.Window - INFO - 开始加载模型
+2025-04-19 11:47:13,779 - TomatoDetector.Window - INFO - 已选择模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:47:13,779 - TomatoDetector.Window - DEBUG - 禁用检测按钮 - 缺少模型或图片
+2025-04-19 11:47:15,374 - TomatoDetector.Window - INFO - 开始加载图片
+2025-04-19 11:47:16,875 - TomatoDetector.Window - INFO - 已选择图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:47:16,876 - TomatoDetector.Window - DEBUG - 正在显示原始图片
+2025-04-19 11:47:16,879 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:47:16,879 - TomatoDetector.Window - DEBUG - 启用检测按钮
+2025-04-19 11:47:24,661 - TomatoDetector.Window - INFO - 开始番茄检测 - 模型: C:/Users/to/Desktop/best.pt, 图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:47:24,665 - TomatoDetector.Window - DEBUG - 检测线程已启动，进度条更新到50%
+2025-04-19 11:47:24,667 - TomatoDetector.ModelThread - INFO - 开始加载模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:47:24,718 - matplotlib - DEBUG - CACHEDIR=C:\Users\to\.matplotlib
+2025-04-19 11:47:24,721 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\to\.matplotlib\fontlist-v390.json
+2025-04-19 11:47:25,803 - TomatoDetector.ModelThread - INFO - 导入YOLO模型成功
+2025-04-19 11:47:25,829 - TomatoDetector.ModelThread - INFO - 模型加载成功: <class 'ultralytics.models.yolo.model.YOLO'>
+2025-04-19 11:47:25,829 - TomatoDetector.ModelThread - INFO - 开始处理图像: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:47:27,542 - TomatoDetector.ModelThread - ERROR - 处理过程中出错: Could not run 'torchvision::nms' with arguments from the 'CUDA' backend. This could be because the operator doesn't exist for this backend, or was omitted during the selective/custom build process (if using custom build). If you are a Facebook employee using PyTorch on mobile, please visit https://fburl.com/ptmfixes for possible resolutions. 'torchvision::nms' is only available for these backends: [CPU, Meta, QuantizedCPU, BackendSelect, Python, FuncTorchDynamicLayerBackMode, Functionalize, Named, Conjugate, Negative, ZeroTensor, ADInplaceOrView, AutogradOther, AutogradCPU, AutogradCUDA, AutogradXLA, AutogradMPS, AutogradXPU, AutogradHPU, AutogradLazy, AutogradMeta, Tracer, AutocastCPU, AutocastCUDA, FuncTorchBatched, BatchedNestedTensor, FuncTorchVmapMode, Batched, VmapMode, FuncTorchGradWrapper, PythonTLSSnapshot, FuncTorchDynamicLayerFrontMode, PreDispatch, PythonDispatcher].
+
+CPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\cpu\nms_kernel.cpp:112 [kernel]
+Meta: registered at /dev/null:467 [kernel]
+QuantizedCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\quantized\cpu\qnms_kernel.cpp:124 [kernel]
+BackendSelect: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\BackendSelectFallbackKernel.cpp:3 [backend fallback]
+Python: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:154 [backend fallback]
+FuncTorchDynamicLayerBackMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:497 [backend fallback]
+Functionalize: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\FunctionalizeFallbackKernel.cpp:324 [backend fallback]
+Named: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\NamedRegistrations.cpp:7 [backend fallback]
+Conjugate: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ConjugateFallback.cpp:17 [backend fallback]
+Negative: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\NegateFallback.cpp:18 [backend fallback]
+ZeroTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ZeroTensorFallback.cpp:86 [backend fallback]
+ADInplaceOrView: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:86 [backend fallback]
+AutogradOther: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:53 [backend fallback]
+AutogradCPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:57 [backend fallback]
+AutogradCUDA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:65 [backend fallback]
+AutogradXLA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:69 [backend fallback]
+AutogradMPS: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:77 [backend fallback]
+AutogradXPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:61 [backend fallback]
+AutogradHPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:90 [backend fallback]
+AutogradLazy: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:73 [backend fallback]
+AutogradMeta: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:81 [backend fallback]
+Tracer: registered at C:\cb\pytorch_1000000000000\work\torch\csrc\autograd\TraceTypeManual.cpp:297 [backend fallback]
+AutocastCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:34 [kernel]
+AutocastCUDA: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:27 [kernel]
+FuncTorchBatched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:731 [backend fallback]
+BatchedNestedTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:758 [backend fallback]
+FuncTorchVmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\VmapModeRegistrations.cpp:27 [backend fallback]
+Batched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\LegacyBatchingRegistrations.cpp:1075 [backend fallback]
+VmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\VmapModeRegistrations.cpp:33 [backend fallback]
+FuncTorchGradWrapper: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\TensorWrapper.cpp:202 [backend fallback]
+PythonTLSSnapshot: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:162 [backend fallback]
+FuncTorchDynamicLayerFrontMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:493 [backend fallback]
+PreDispatch: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:166 [backend fallback]
+PythonDispatcher: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:158 [backend fallback]
+Traceback (most recent call last):
+  File "C:\Users\to\PycharmProjects\PythonProject\tomato_detector.py", line 46, in run
+    results = model(self.image_path)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\model.py", line 182, in __call__
+    return self.predict(source, stream, **kwargs)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    return self.predictor.predict_cli(source=source) if is_cli else self.predictor(source=source, stream=stream)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\predictor.py", line 216, in __call__
+    return list(self.stream_inference(source, model, *args, **kwargs))  # merge list of Result into one
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\torch\utils\_contextlib.py", line 35, in generator_context
+    response = gen.send(None)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\predictor.py", line 332, in stream_inference
+    self.results = self.postprocess(preds, im, im0s)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\models\yolo\detect\predict.py", line 54, in postprocess
+    preds = ops.non_max_suppression(
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\utils\ops.py", line 312, in non_max_suppression
+    i = torchvision.ops.nms(boxes, scores, iou_thres)  # NMS
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\torchvision\ops\boxes.py", line 41, in nms
+    return torch.ops.torchvision.nms(boxes, scores, iou_threshold)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\torch\_ops.py", line 854, in __call__
+    return self_._op(*args, **(kwargs or {}))
+NotImplementedError: Could not run 'torchvision::nms' with arguments from the 'CUDA' backend. This could be because the operator doesn't exist for this backend, or was omitted during the selective/custom build process (if using custom build). If you are a Facebook employee using PyTorch on mobile, please visit https://fburl.com/ptmfixes for possible resolutions. 'torchvision::nms' is only available for these backends: [CPU, Meta, QuantizedCPU, BackendSelect, Python, FuncTorchDynamicLayerBackMode, Functionalize, Named, Conjugate, Negative, ZeroTensor, ADInplaceOrView, AutogradOther, AutogradCPU, AutogradCUDA, AutogradXLA, AutogradMPS, AutogradXPU, AutogradHPU, AutogradLazy, AutogradMeta, Tracer, AutocastCPU, AutocastCUDA, FuncTorchBatched, BatchedNestedTensor, FuncTorchVmapMode, Batched, VmapMode, FuncTorchGradWrapper, PythonTLSSnapshot, FuncTorchDynamicLayerFrontMode, PreDispatch, PythonDispatcher].
+
+CPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\cpu\nms_kernel.cpp:112 [kernel]
+Meta: registered at /dev/null:467 [kernel]
+QuantizedCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\quantized\cpu\qnms_kernel.cpp:124 [kernel]
+BackendSelect: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\BackendSelectFallbackKernel.cpp:3 [backend fallback]
+Python: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:154 [backend fallback]
+FuncTorchDynamicLayerBackMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:497 [backend fallback]
+Functionalize: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\FunctionalizeFallbackKernel.cpp:324 [backend fallback]
+Named: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\NamedRegistrations.cpp:7 [backend fallback]
+Conjugate: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ConjugateFallback.cpp:17 [backend fallback]
+Negative: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\NegateFallback.cpp:18 [backend fallback]
+ZeroTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ZeroTensorFallback.cpp:86 [backend fallback]
+ADInplaceOrView: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:86 [backend fallback]
+AutogradOther: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:53 [backend fallback]
+AutogradCPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:57 [backend fallback]
+AutogradCUDA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:65 [backend fallback]
+AutogradXLA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:69 [backend fallback]
+AutogradMPS: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:77 [backend fallback]
+AutogradXPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:61 [backend fallback]
+AutogradHPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:90 [backend fallback]
+AutogradLazy: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:73 [backend fallback]
+AutogradMeta: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:81 [backend fallback]
+Tracer: registered at C:\cb\pytorch_1000000000000\work\torch\csrc\autograd\TraceTypeManual.cpp:297 [backend fallback]
+AutocastCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:34 [kernel]
+AutocastCUDA: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:27 [kernel]
+FuncTorchBatched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:731 [backend fallback]
+BatchedNestedTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:758 [backend fallback]
+FuncTorchVmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\VmapModeRegistrations.cpp:27 [backend fallback]
+Batched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\LegacyBatchingRegistrations.cpp:1075 [backend fallback]
+VmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\VmapModeRegistrations.cpp:33 [backend fallback]
+FuncTorchGradWrapper: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\TensorWrapper.cpp:202 [backend fallback]
+PythonTLSSnapshot: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:162 [backend fallback]
+FuncTorchDynamicLayerFrontMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:493 [backend fallback]
+PreDispatch: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:166 [backend fallback]
+PythonDispatcher: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:158 [backend fallback]
+
+2025-04-19 11:47:27,615 - TomatoDetector.Window - ERROR - 检测过程中发生错误: 处理过程中出错: Could not run 'torchvision::nms' with arguments from the 'CUDA' backend. This could be because the operator doesn't exist for this backend, or was omitted during the selective/custom build process (if using custom build). If you are a Facebook employee using PyTorch on mobile, please visit https://fburl.com/ptmfixes for possible resolutions. 'torchvision::nms' is only available for these backends: [CPU, Meta, QuantizedCPU, BackendSelect, Python, FuncTorchDynamicLayerBackMode, Functionalize, Named, Conjugate, Negative, ZeroTensor, ADInplaceOrView, AutogradOther, AutogradCPU, AutogradCUDA, AutogradXLA, AutogradMPS, AutogradXPU, AutogradHPU, AutogradLazy, AutogradMeta, Tracer, AutocastCPU, AutocastCUDA, FuncTorchBatched, BatchedNestedTensor, FuncTorchVmapMode, Batched, VmapMode, FuncTorchGradWrapper, PythonTLSSnapshot, FuncTorchDynamicLayerFrontMode, PreDispatch, PythonDispatcher].
+
+CPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\cpu\nms_kernel.cpp:112 [kernel]
+Meta: registered at /dev/null:467 [kernel]
+QuantizedCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\quantized\cpu\qnms_kernel.cpp:124 [kernel]
+BackendSelect: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\BackendSelectFallbackKernel.cpp:3 [backend fallback]
+Python: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:154 [backend fallback]
+FuncTorchDynamicLayerBackMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:497 [backend fallback]
+Functionalize: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\FunctionalizeFallbackKernel.cpp:324 [backend fallback]
+Named: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\NamedRegistrations.cpp:7 [backend fallback]
+Conjugate: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ConjugateFallback.cpp:17 [backend fallback]
+Negative: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\NegateFallback.cpp:18 [backend fallback]
+ZeroTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ZeroTensorFallback.cpp:86 [backend fallback]
+ADInplaceOrView: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:86 [backend fallback]
+AutogradOther: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:53 [backend fallback]
+AutogradCPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:57 [backend fallback]
+AutogradCUDA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:65 [backend fallback]
+AutogradXLA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:69 [backend fallback]
+AutogradMPS: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:77 [backend fallback]
+AutogradXPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:61 [backend fallback]
+AutogradHPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:90 [backend fallback]
+AutogradLazy: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:73 [backend fallback]
+AutogradMeta: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:81 [backend fallback]
+Tracer: registered at C:\cb\pytorch_1000000000000\work\torch\csrc\autograd\TraceTypeManual.cpp:297 [backend fallback]
+AutocastCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:34 [kernel]
+AutocastCUDA: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:27 [kernel]
+FuncTorchBatched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:731 [backend fallback]
+BatchedNestedTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:758 [backend fallback]
+FuncTorchVmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\VmapModeRegistrations.cpp:27 [backend fallback]
+Batched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\LegacyBatchingRegistrations.cpp:1075 [backend fallback]
+VmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\VmapModeRegistrations.cpp:33 [backend fallback]
+FuncTorchGradWrapper: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\TensorWrapper.cpp:202 [backend fallback]
+PythonTLSSnapshot: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:162 [backend fallback]
+FuncTorchDynamicLayerFrontMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:493 [backend fallback]
+PreDispatch: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:166 [backend fallback]
+PythonDispatcher: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:158 [backend fallback]
+
+2025-04-19 11:47:27,653 - TomatoDetector.Window - DEBUG - 检测线程已完成
+2025-04-19 11:47:43,961 - TomatoDetector.Main - INFO - 应用程序结束，退出代码: 0
+2025-04-19 11:48:57,071 - TomatoDetector.Main - INFO - 番茄检测应用程序启动
+2025-04-19 11:48:57,071 - TomatoDetector.Main - INFO - PyTorch版本: 2.3.0
+2025-04-19 11:48:57,094 - TomatoDetector.Main - INFO - CUDA是否可用: True
+2025-04-19 11:48:57,094 - TomatoDetector.Main - INFO - CUDA版本: 12.1
+2025-04-19 11:48:57,094 - TomatoDetector.Main - INFO - CUDA设备数量: 1
+2025-04-19 11:48:57,095 - TomatoDetector.Main - INFO - 当前CUDA设备: 0
+2025-04-19 11:48:57,095 - TomatoDetector.Main - INFO - CUDA设备名称: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 11:48:57,139 - TomatoDetector.Window - INFO - 初始化番茄检测器窗口
+2025-04-19 11:48:57,140 - TomatoDetector.Window - DEBUG - UI初始化
+2025-04-19 11:48:57,154 - TomatoDetector.Window - DEBUG - UI初始化完成
+2025-04-19 11:48:57,537 - TomatoDetector.Main - INFO - 应用程序主窗口显示
+2025-04-19 11:48:58,503 - TomatoDetector.Window - INFO - 开始加载模型
+2025-04-19 11:49:01,288 - TomatoDetector.Window - INFO - 已选择模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:49:01,288 - TomatoDetector.Window - DEBUG - 禁用检测按钮 - 缺少模型或图片
+2025-04-19 11:49:02,350 - TomatoDetector.Window - INFO - 开始加载图片
+2025-04-19 11:49:03,470 - TomatoDetector.Window - INFO - 已选择图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:49:03,470 - TomatoDetector.Window - DEBUG - 正在显示原始图片
+2025-04-19 11:49:03,473 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:49:03,473 - TomatoDetector.Window - DEBUG - 启用检测按钮
+2025-04-19 11:49:05,078 - TomatoDetector.Window - INFO - 开始番茄检测 - 模型: C:/Users/to/Desktop/best.pt, 图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:49:05,082 - TomatoDetector.Window - DEBUG - 检测线程已启动，进度条更新到50%
+2025-04-19 11:49:05,082 - TomatoDetector.ModelThread - INFO - 开始加载模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:49:05,129 - matplotlib - DEBUG - CACHEDIR=C:\Users\to\.matplotlib
+2025-04-19 11:49:05,132 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\to\.matplotlib\fontlist-v390.json
+2025-04-19 11:49:06,205 - TomatoDetector.ModelThread - INFO - 导入YOLO模型成功
+2025-04-19 11:49:06,230 - TomatoDetector.ModelThread - INFO - 模型加载成功: <class 'ultralytics.models.yolo.model.YOLO'>
+2025-04-19 11:49:06,231 - TomatoDetector.ModelThread - INFO - CUDA是否可用: True
+2025-04-19 11:49:06,231 - TomatoDetector.ModelThread - INFO - CUDA设备: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 11:49:06,231 - TomatoDetector.ModelThread - INFO - PyTorch CUDA版本: 12.1
+2025-04-19 11:49:06,231 - TomatoDetector.ModelThread - INFO - 开始处理图像: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:49:06,231 - TomatoDetector.ModelThread - INFO - 强制在CPU上运行推理
+2025-04-19 11:49:09,437 - TomatoDetector.ModelThread - INFO - 图像处理完成，获取结果: <class 'list'> 数量: 1
+2025-04-19 11:49:09,438 - TomatoDetector.ModelThread - DEBUG - 处理结果 1/1
+2025-04-19 11:49:09,438 - TomatoDetector.ModelThread - DEBUG - 找到 2 个检测框
+2025-04-19 11:49:09,438 - TomatoDetector.ModelThread - DEBUG - 检测框 1: 类别ID=0, 置信度=0.7454
+2025-04-19 11:49:09,438 - TomatoDetector.ModelThread - DEBUG - 模型类别映射: {0: 'tomato', 1: 'green tomato'}
+2025-04-19 11:49:09,438 - TomatoDetector.ModelThread - DEBUG - 类别ID为0，识别为番茄
+2025-04-19 11:49:09,438 - TomatoDetector.ModelThread - DEBUG - 更新最高置信度: 0.7454
+2025-04-19 11:49:09,438 - TomatoDetector.ModelThread - DEBUG - 检测框 2: 类别ID=0, 置信度=0.6974
+2025-04-19 11:49:09,438 - TomatoDetector.ModelThread - DEBUG - 模型类别映射: {0: 'tomato', 1: 'green tomato'}
+2025-04-19 11:49:09,438 - TomatoDetector.ModelThread - DEBUG - 类别ID为0，识别为番茄
+2025-04-19 11:49:09,503 - TomatoDetector.ModelThread - INFO - 开始生成结果图像
+2025-04-19 11:49:09,504 - TomatoDetector.ModelThread - INFO - 结果图像生成成功: 形状=(196, 257, 3)
+2025-04-19 11:49:09,504 - TomatoDetector.ModelThread - INFO - 检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 11:49:09,504 - TomatoDetector.Window - INFO - 收到检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 11:49:09,504 - TomatoDetector.Window - DEBUG - 正在显示处理后的图片
+2025-04-19 11:49:09,504 - TomatoDetector.Window - DEBUG - 处理OpenCV格式的图像结果
+2025-04-19 11:49:09,504 - TomatoDetector.Window - DEBUG - 图像尺寸: 257x196, 通道数: 3
+2025-04-19 11:49:09,505 - TomatoDetector.Window - DEBUG - OpenCV图像转换为QPixmap成功
+2025-04-19 11:49:09,506 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:49:09,512 - TomatoDetector.Window - INFO - 检测流程完成
+2025-04-19 11:49:09,513 - TomatoDetector.Window - DEBUG - 检测线程已完成
+2025-04-19 11:49:14,771 - TomatoDetector.Main - INFO - 应用程序结束，退出代码: 0
+2025-04-19 11:52:24,761 - TomatoDetector.Main - INFO - 番茄检测应用程序启动
+2025-04-19 11:52:24,762 - TomatoDetector.Main - INFO - PyTorch版本: 2.3.0
+2025-04-19 11:52:24,778 - TomatoDetector.Main - INFO - CUDA是否可用: True
+2025-04-19 11:52:24,779 - TomatoDetector.Main - INFO - CUDA版本: 12.1
+2025-04-19 11:52:24,779 - TomatoDetector.Main - INFO - CUDA设备数量: 1
+2025-04-19 11:52:24,780 - TomatoDetector.Main - INFO - 当前CUDA设备: 0
+2025-04-19 11:52:24,780 - TomatoDetector.Main - INFO - CUDA设备名称: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 11:52:24,820 - TomatoDetector.Window - INFO - 初始化番茄检测器窗口
+2025-04-19 11:52:24,821 - TomatoDetector.Window - DEBUG - UI初始化
+2025-04-19 11:52:24,834 - TomatoDetector.Window - DEBUG - UI初始化完成
+2025-04-19 11:52:25,211 - TomatoDetector.Main - INFO - 应用程序主窗口显示
+2025-04-19 11:52:26,300 - TomatoDetector.Window - INFO - 开始加载模型
+2025-04-19 11:52:29,366 - TomatoDetector.Window - INFO - 已选择模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:52:29,367 - TomatoDetector.Window - DEBUG - 禁用检测按钮 - 缺少模型或图片
+2025-04-19 11:52:30,639 - TomatoDetector.Window - INFO - 开始加载图片
+2025-04-19 11:52:31,741 - TomatoDetector.Window - INFO - 已选择图片: C:/Users/to/Desktop/images.jpg
+2025-04-19 11:52:31,741 - TomatoDetector.Window - DEBUG - 正在显示原始图片
+2025-04-19 11:52:31,744 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:52:31,744 - TomatoDetector.Window - DEBUG - 启用检测按钮
+2025-04-19 11:52:33,510 - TomatoDetector.Window - INFO - 开始番茄检测 - 模型: C:/Users/to/Desktop/best.pt, 图片: C:/Users/to/Desktop/images.jpg
+2025-04-19 11:52:33,515 - TomatoDetector.Window - DEBUG - 检测线程已启动，进度条更新到50%
+2025-04-19 11:52:33,515 - TomatoDetector.ModelThread - INFO - 开始加载模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:52:33,561 - matplotlib - DEBUG - CACHEDIR=C:\Users\to\.matplotlib
+2025-04-19 11:52:33,564 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\to\.matplotlib\fontlist-v390.json
+2025-04-19 11:52:34,652 - TomatoDetector.ModelThread - INFO - 导入YOLO模型成功
+2025-04-19 11:52:34,676 - TomatoDetector.ModelThread - INFO - 模型加载成功: <class 'ultralytics.models.yolo.model.YOLO'>
+2025-04-19 11:52:34,676 - TomatoDetector.ModelThread - INFO - CUDA是否可用: True
+2025-04-19 11:52:34,676 - TomatoDetector.ModelThread - INFO - CUDA设备: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 11:52:34,676 - TomatoDetector.ModelThread - INFO - PyTorch CUDA版本: 12.1
+2025-04-19 11:52:34,677 - TomatoDetector.ModelThread - INFO - 开始处理图像: C:/Users/to/Desktop/images.jpg
+2025-04-19 11:52:34,677 - TomatoDetector.ModelThread - INFO - 强制在CPU上运行推理
+2025-04-19 11:52:35,453 - TomatoDetector.ModelThread - INFO - 图像处理完成，获取结果: <class 'list'> 数量: 1
+2025-04-19 11:52:35,453 - TomatoDetector.ModelThread - DEBUG - 处理结果 1/1
+2025-04-19 11:52:35,453 - TomatoDetector.ModelThread - DEBUG - 找到 1 个检测框
+2025-04-19 11:52:35,453 - TomatoDetector.ModelThread - DEBUG - 检测框 1: 类别ID=0, 置信度=0.5126
+2025-04-19 11:52:35,453 - TomatoDetector.ModelThread - DEBUG - 模型类别映射: {0: 'tomato', 1: 'green tomato'}
+2025-04-19 11:52:35,453 - TomatoDetector.ModelThread - DEBUG - 类别ID为0，识别为番茄
+2025-04-19 11:52:35,453 - TomatoDetector.ModelThread - DEBUG - 更新最高置信度: 0.5126
+2025-04-19 11:52:35,515 - TomatoDetector.ModelThread - INFO - 开始生成结果图像
+2025-04-19 11:52:35,515 - TomatoDetector.ModelThread - INFO - 结果图像生成成功: 形状=(225, 225, 3)
+2025-04-19 11:52:35,515 - TomatoDetector.ModelThread - INFO - 检测结果: 检测到番茄! 置信度: 0.51
+2025-04-19 11:52:35,516 - TomatoDetector.Window - INFO - 收到检测结果: 检测到番茄! 置信度: 0.51
+2025-04-19 11:52:35,516 - TomatoDetector.Window - DEBUG - 正在显示处理后的图片
+2025-04-19 11:52:35,516 - TomatoDetector.Window - DEBUG - 处理OpenCV格式的图像结果
+2025-04-19 11:52:35,516 - TomatoDetector.Window - DEBUG - 图像尺寸: 225x225, 通道数: 3
+2025-04-19 11:52:35,516 - TomatoDetector.Window - DEBUG - OpenCV图像转换为QPixmap成功
+2025-04-19 11:52:35,516 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:52:35,521 - TomatoDetector.Window - INFO - 检测流程完成
+2025-04-19 11:52:35,521 - TomatoDetector.Window - DEBUG - 检测线程已完成
+2025-04-19 11:52:39,896 - TomatoDetector.Window - INFO - 开始加载模型
+2025-04-19 11:52:41,676 - TomatoDetector.Window - INFO - 用户取消了模型选择
+2025-04-19 11:52:42,213 - TomatoDetector.Window - INFO - 开始加载图片
+2025-04-19 11:52:43,147 - TomatoDetector.Window - INFO - 已选择图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:52:43,148 - TomatoDetector.Window - DEBUG - 正在显示原始图片
+2025-04-19 11:52:43,149 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:52:43,149 - TomatoDetector.Window - DEBUG - 启用检测按钮
+2025-04-19 11:52:44,049 - TomatoDetector.Window - INFO - 开始番茄检测 - 模型: C:/Users/to/Desktop/best.pt, 图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:52:44,050 - TomatoDetector.Window - DEBUG - 检测线程已启动，进度条更新到50%
+2025-04-19 11:52:44,050 - TomatoDetector.ModelThread - INFO - 开始加载模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:52:44,050 - TomatoDetector.ModelThread - INFO - 导入YOLO模型成功
+2025-04-19 11:52:44,071 - TomatoDetector.ModelThread - INFO - 模型加载成功: <class 'ultralytics.models.yolo.model.YOLO'>
+2025-04-19 11:52:44,071 - TomatoDetector.ModelThread - INFO - CUDA是否可用: True
+2025-04-19 11:52:44,071 - TomatoDetector.ModelThread - INFO - CUDA设备: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 11:52:44,071 - TomatoDetector.ModelThread - INFO - PyTorch CUDA版本: 12.1
+2025-04-19 11:52:44,071 - TomatoDetector.ModelThread - INFO - 开始处理图像: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:52:44,072 - TomatoDetector.ModelThread - INFO - 强制在CPU上运行推理
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - INFO - 图像处理完成，获取结果: <class 'list'> 数量: 1
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - DEBUG - 处理结果 1/1
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - DEBUG - 找到 2 个检测框
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - DEBUG - 检测框 1: 类别ID=0, 置信度=0.7454
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - DEBUG - 模型类别映射: {0: 'tomato', 1: 'green tomato'}
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - DEBUG - 类别ID为0，识别为番茄
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - DEBUG - 更新最高置信度: 0.7454
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - DEBUG - 检测框 2: 类别ID=0, 置信度=0.6974
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - DEBUG - 模型类别映射: {0: 'tomato', 1: 'green tomato'}
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - DEBUG - 类别ID为0，识别为番茄
+2025-04-19 11:52:44,185 - TomatoDetector.ModelThread - INFO - 开始生成结果图像
+2025-04-19 11:52:44,186 - TomatoDetector.ModelThread - INFO - 结果图像生成成功: 形状=(196, 257, 3)
+2025-04-19 11:52:44,186 - TomatoDetector.ModelThread - INFO - 检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 11:52:44,186 - TomatoDetector.Window - INFO - 收到检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 11:52:44,186 - TomatoDetector.Window - DEBUG - 正在显示处理后的图片
+2025-04-19 11:52:44,186 - TomatoDetector.Window - DEBUG - 处理OpenCV格式的图像结果
+2025-04-19 11:52:44,186 - TomatoDetector.Window - DEBUG - 图像尺寸: 257x196, 通道数: 3
+2025-04-19 11:52:44,186 - TomatoDetector.Window - DEBUG - OpenCV图像转换为QPixmap成功
+2025-04-19 11:52:44,187 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:52:44,189 - TomatoDetector.Window - INFO - 检测流程完成
+2025-04-19 11:52:44,189 - TomatoDetector.Window - DEBUG - 检测线程已完成
+2025-04-19 11:52:45,676 - TomatoDetector.Main - INFO - 应用程序结束，退出代码: 0
+2025-04-19 11:54:28,510 - TomatoDetector.Main - INFO - 番茄检测应用程序启动
+2025-04-19 11:54:28,510 - TomatoDetector.Main - INFO - PyTorch版本: 2.3.0
+2025-04-19 11:54:28,531 - TomatoDetector.Main - INFO - CUDA是否可用: True
+2025-04-19 11:54:28,531 - TomatoDetector.Main - INFO - CUDA版本: 12.1
+2025-04-19 11:54:28,531 - TomatoDetector.Main - INFO - CUDA设备数量: 1
+2025-04-19 11:54:28,532 - TomatoDetector.Main - INFO - 当前CUDA设备: 0
+2025-04-19 11:54:28,532 - TomatoDetector.Main - INFO - CUDA设备名称: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 11:54:28,574 - TomatoDetector.Window - INFO - 初始化番茄检测器窗口
+2025-04-19 11:54:28,574 - TomatoDetector.Window - DEBUG - UI初始化
+2025-04-19 11:54:28,588 - TomatoDetector.Window - DEBUG - UI初始化完成
+2025-04-19 11:54:28,950 - TomatoDetector.Main - INFO - 应用程序主窗口显示
+2025-04-19 11:54:37,885 - TomatoDetector.Window - INFO - 开始加载模型
+2025-04-19 11:54:40,062 - TomatoDetector.Window - INFO - 已选择模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:54:40,062 - TomatoDetector.Window - DEBUG - 禁用检测按钮 - 缺少模型或图片
+2025-04-19 11:54:40,979 - TomatoDetector.Window - INFO - 开始加载图片
+2025-04-19 11:54:42,438 - TomatoDetector.Window - INFO - 已选择图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:54:42,438 - TomatoDetector.Window - DEBUG - 正在显示原始图片
+2025-04-19 11:54:42,441 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:54:42,441 - TomatoDetector.Window - DEBUG - 启用检测按钮
+2025-04-19 11:54:43,528 - TomatoDetector.Window - INFO - 开始番茄检测 - 模型: C:/Users/to/Desktop/best.pt, 图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:54:57,772 - TomatoDetector.Main - INFO - 番茄检测应用程序启动
+2025-04-19 11:54:57,773 - TomatoDetector.Main - INFO - PyTorch版本: 2.3.0
+2025-04-19 11:54:57,792 - TomatoDetector.Main - INFO - CUDA是否可用: True
+2025-04-19 11:54:57,793 - TomatoDetector.Main - INFO - CUDA版本: 12.1
+2025-04-19 11:54:57,793 - TomatoDetector.Main - INFO - CUDA设备数量: 1
+2025-04-19 11:54:57,794 - TomatoDetector.Main - INFO - 当前CUDA设备: 0
+2025-04-19 11:54:57,794 - TomatoDetector.Main - INFO - CUDA设备名称: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 11:54:57,836 - TomatoDetector.Window - INFO - 初始化番茄检测器窗口
+2025-04-19 11:54:57,836 - TomatoDetector.Window - DEBUG - UI初始化
+2025-04-19 11:54:57,850 - TomatoDetector.Window - DEBUG - UI初始化完成
+2025-04-19 11:54:58,215 - TomatoDetector.Main - INFO - 应用程序主窗口显示
+2025-04-19 11:54:59,458 - TomatoDetector.Window - INFO - 开始加载模型
+2025-04-19 11:55:01,603 - TomatoDetector.Window - INFO - 已选择模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:55:01,603 - TomatoDetector.Window - DEBUG - 禁用检测按钮 - 缺少模型或图片
+2025-04-19 11:55:02,443 - TomatoDetector.Window - INFO - 开始加载图片
+2025-04-19 11:55:03,746 - TomatoDetector.Window - INFO - 已选择图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:55:03,746 - TomatoDetector.Window - DEBUG - 正在显示原始图片
+2025-04-19 11:55:03,749 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:55:03,749 - TomatoDetector.Window - DEBUG - 启用检测按钮
+2025-04-19 11:55:04,892 - TomatoDetector.Window - INFO - 设备设置为: 仅CPU
+2025-04-19 11:55:05,356 - TomatoDetector.Window - INFO - 设备设置为: 仅CPU
+2025-04-19 11:55:07,145 - TomatoDetector.Window - INFO - 开始番茄检测 - 模型: C:/Users/to/Desktop/best.pt, 图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:55:07,150 - TomatoDetector.Window - DEBUG - 检测线程已启动，进度条更新到50%
+2025-04-19 11:55:07,150 - TomatoDetector.ModelThread - INFO - 开始加载模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:55:07,196 - matplotlib - DEBUG - CACHEDIR=C:\Users\to\.matplotlib
+2025-04-19 11:55:07,199 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\to\.matplotlib\fontlist-v390.json
+2025-04-19 11:55:08,259 - TomatoDetector.ModelThread - INFO - 导入YOLO模型成功
+2025-04-19 11:55:08,283 - TomatoDetector.ModelThread - INFO - 模型加载成功: <class 'ultralytics.models.yolo.model.YOLO'>
+2025-04-19 11:55:08,283 - TomatoDetector.ModelThread - INFO - CUDA是否可用: True
+2025-04-19 11:55:08,283 - TomatoDetector.ModelThread - INFO - CUDA设备: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 11:55:08,283 - TomatoDetector.ModelThread - INFO - PyTorch CUDA版本: 12.1
+2025-04-19 11:55:08,283 - TomatoDetector.ModelThread - INFO - 开始处理图像: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:55:08,283 - TomatoDetector.ModelThread - INFO - 使用指定设备 'cpu' 进行推理
+2025-04-19 11:55:09,048 - TomatoDetector.ModelThread - INFO - 图像处理完成，获取结果: <class 'list'> 数量: 1
+2025-04-19 11:55:09,048 - TomatoDetector.ModelThread - DEBUG - 处理结果 1/1
+2025-04-19 11:55:09,048 - TomatoDetector.ModelThread - DEBUG - 找到 2 个检测框
+2025-04-19 11:55:09,048 - TomatoDetector.ModelThread - DEBUG - 检测框 1: 类别ID=0, 置信度=0.7454
+2025-04-19 11:55:09,048 - TomatoDetector.ModelThread - DEBUG - 模型类别映射: {0: 'tomato', 1: 'green tomato'}
+2025-04-19 11:55:09,048 - TomatoDetector.ModelThread - DEBUG - 类别ID为0，识别为番茄
+2025-04-19 11:55:09,048 - TomatoDetector.ModelThread - DEBUG - 更新最高置信度: 0.7454
+2025-04-19 11:55:09,048 - TomatoDetector.ModelThread - DEBUG - 检测框 2: 类别ID=0, 置信度=0.6974
+2025-04-19 11:55:09,048 - TomatoDetector.ModelThread - DEBUG - 模型类别映射: {0: 'tomato', 1: 'green tomato'}
+2025-04-19 11:55:09,048 - TomatoDetector.ModelThread - DEBUG - 类别ID为0，识别为番茄
+2025-04-19 11:55:09,110 - TomatoDetector.ModelThread - INFO - 开始生成结果图像
+2025-04-19 11:55:09,112 - TomatoDetector.ModelThread - INFO - 结果图像生成成功: 形状=(196, 257, 3)
+2025-04-19 11:55:09,112 - TomatoDetector.ModelThread - INFO - 检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 11:55:09,112 - TomatoDetector.Window - INFO - 收到检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 11:55:09,112 - TomatoDetector.Window - DEBUG - 正在显示处理后的图片
+2025-04-19 11:55:09,112 - TomatoDetector.Window - DEBUG - 处理OpenCV格式的图像结果
+2025-04-19 11:55:09,112 - TomatoDetector.Window - DEBUG - 图像尺寸: 257x196, 通道数: 3
+2025-04-19 11:55:09,112 - TomatoDetector.Window - DEBUG - OpenCV图像转换为QPixmap成功
+2025-04-19 11:55:09,113 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:55:09,118 - TomatoDetector.Window - INFO - 检测流程完成
+2025-04-19 11:55:09,118 - TomatoDetector.Window - DEBUG - 检测线程已完成
+2025-04-19 11:55:12,197 - TomatoDetector.Window - INFO - 设备设置为: 自动选择
+2025-04-19 11:55:13,891 - TomatoDetector.Window - INFO - 设备设置为: GPU (CUDA)
+2025-04-19 11:55:17,458 - TomatoDetector.Window - INFO - 开始番茄检测 - 模型: C:/Users/to/Desktop/best.pt, 图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:55:17,459 - TomatoDetector.Window - DEBUG - 检测线程已启动，进度条更新到50%
+2025-04-19 11:55:17,459 - TomatoDetector.ModelThread - INFO - 开始加载模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:55:17,459 - TomatoDetector.ModelThread - INFO - 导入YOLO模型成功
+2025-04-19 11:55:17,481 - TomatoDetector.ModelThread - INFO - 模型加载成功: <class 'ultralytics.models.yolo.model.YOLO'>
+2025-04-19 11:55:17,481 - TomatoDetector.ModelThread - INFO - CUDA是否可用: True
+2025-04-19 11:55:17,481 - TomatoDetector.ModelThread - INFO - CUDA设备: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 11:55:17,481 - TomatoDetector.ModelThread - INFO - PyTorch CUDA版本: 12.1
+2025-04-19 11:55:17,481 - TomatoDetector.ModelThread - INFO - 开始处理图像: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:55:17,481 - TomatoDetector.ModelThread - INFO - 使用指定设备 'cuda:0' 进行推理
+2025-04-19 11:55:18,525 - TomatoDetector.ModelThread - ERROR - CUDA版本与PyTorch不兼容，请尝试使用CPU模式: Could not run 'torchvision::nms' with arguments from the 'CUDA' backend. This could be because the operator doesn't exist for this backend, or was omitted during the selective/custom build process (if using custom build). If you are a Facebook employee using PyTorch on mobile, please visit https://fburl.com/ptmfixes for possible resolutions. 'torchvision::nms' is only available for these backends: [CPU, Meta, QuantizedCPU, BackendSelect, Python, FuncTorchDynamicLayerBackMode, Functionalize, Named, Conjugate, Negative, ZeroTensor, ADInplaceOrView, AutogradOther, AutogradCPU, AutogradCUDA, AutogradXLA, AutogradMPS, AutogradXPU, AutogradHPU, AutogradLazy, AutogradMeta, Tracer, AutocastCPU, AutocastCUDA, FuncTorchBatched, BatchedNestedTensor, FuncTorchVmapMode, Batched, VmapMode, FuncTorchGradWrapper, PythonTLSSnapshot, FuncTorchDynamicLayerFrontMode, PreDispatch, PythonDispatcher].
+
+CPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\cpu\nms_kernel.cpp:112 [kernel]
+Meta: registered at /dev/null:467 [kernel]
+QuantizedCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\quantized\cpu\qnms_kernel.cpp:124 [kernel]
+BackendSelect: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\BackendSelectFallbackKernel.cpp:3 [backend fallback]
+Python: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:154 [backend fallback]
+FuncTorchDynamicLayerBackMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:497 [backend fallback]
+Functionalize: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\FunctionalizeFallbackKernel.cpp:324 [backend fallback]
+Named: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\NamedRegistrations.cpp:7 [backend fallback]
+Conjugate: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ConjugateFallback.cpp:17 [backend fallback]
+Negative: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\NegateFallback.cpp:18 [backend fallback]
+ZeroTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ZeroTensorFallback.cpp:86 [backend fallback]
+ADInplaceOrView: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:86 [backend fallback]
+AutogradOther: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:53 [backend fallback]
+AutogradCPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:57 [backend fallback]
+AutogradCUDA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:65 [backend fallback]
+AutogradXLA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:69 [backend fallback]
+AutogradMPS: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:77 [backend fallback]
+AutogradXPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:61 [backend fallback]
+AutogradHPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:90 [backend fallback]
+AutogradLazy: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:73 [backend fallback]
+AutogradMeta: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:81 [backend fallback]
+Tracer: registered at C:\cb\pytorch_1000000000000\work\torch\csrc\autograd\TraceTypeManual.cpp:297 [backend fallback]
+AutocastCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:34 [kernel]
+AutocastCUDA: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:27 [kernel]
+FuncTorchBatched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:731 [backend fallback]
+BatchedNestedTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:758 [backend fallback]
+FuncTorchVmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\VmapModeRegistrations.cpp:27 [backend fallback]
+Batched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\LegacyBatchingRegistrations.cpp:1075 [backend fallback]
+VmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\VmapModeRegistrations.cpp:33 [backend fallback]
+FuncTorchGradWrapper: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\TensorWrapper.cpp:202 [backend fallback]
+PythonTLSSnapshot: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:162 [backend fallback]
+FuncTorchDynamicLayerFrontMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:493 [backend fallback]
+PreDispatch: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:166 [backend fallback]
+PythonDispatcher: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:158 [backend fallback]
+Traceback (most recent call last):
+  File "C:\Users\to\PycharmProjects\PythonProject\tomato_detector.py", line 62, in run
+    results = model(self.image_path, device=self.device)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\model.py", line 182, in __call__
+    return self.predict(source, stream, **kwargs)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    return self.predictor.predict_cli(source=source) if is_cli else self.predictor(source=source, stream=stream)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\predictor.py", line 216, in __call__
+    return list(self.stream_inference(source, model, *args, **kwargs))  # merge list of Result into one
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\torch\utils\_contextlib.py", line 35, in generator_context
+    response = gen.send(None)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\predictor.py", line 332, in stream_inference
+    self.results = self.postprocess(preds, im, im0s)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\models\yolo\detect\predict.py", line 54, in postprocess
+    preds = ops.non_max_suppression(
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\utils\ops.py", line 312, in non_max_suppression
+    i = torchvision.ops.nms(boxes, scores, iou_thres)  # NMS
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\torchvision\ops\boxes.py", line 41, in nms
+    return torch.ops.torchvision.nms(boxes, scores, iou_threshold)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\torch\_ops.py", line 854, in __call__
+    return self_._op(*args, **(kwargs or {}))
+NotImplementedError: Could not run 'torchvision::nms' with arguments from the 'CUDA' backend. This could be because the operator doesn't exist for this backend, or was omitted during the selective/custom build process (if using custom build). If you are a Facebook employee using PyTorch on mobile, please visit https://fburl.com/ptmfixes for possible resolutions. 'torchvision::nms' is only available for these backends: [CPU, Meta, QuantizedCPU, BackendSelect, Python, FuncTorchDynamicLayerBackMode, Functionalize, Named, Conjugate, Negative, ZeroTensor, ADInplaceOrView, AutogradOther, AutogradCPU, AutogradCUDA, AutogradXLA, AutogradMPS, AutogradXPU, AutogradHPU, AutogradLazy, AutogradMeta, Tracer, AutocastCPU, AutocastCUDA, FuncTorchBatched, BatchedNestedTensor, FuncTorchVmapMode, Batched, VmapMode, FuncTorchGradWrapper, PythonTLSSnapshot, FuncTorchDynamicLayerFrontMode, PreDispatch, PythonDispatcher].
+
+CPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\cpu\nms_kernel.cpp:112 [kernel]
+Meta: registered at /dev/null:467 [kernel]
+QuantizedCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\quantized\cpu\qnms_kernel.cpp:124 [kernel]
+BackendSelect: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\BackendSelectFallbackKernel.cpp:3 [backend fallback]
+Python: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:154 [backend fallback]
+FuncTorchDynamicLayerBackMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:497 [backend fallback]
+Functionalize: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\FunctionalizeFallbackKernel.cpp:324 [backend fallback]
+Named: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\NamedRegistrations.cpp:7 [backend fallback]
+Conjugate: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ConjugateFallback.cpp:17 [backend fallback]
+Negative: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\NegateFallback.cpp:18 [backend fallback]
+ZeroTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ZeroTensorFallback.cpp:86 [backend fallback]
+ADInplaceOrView: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:86 [backend fallback]
+AutogradOther: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:53 [backend fallback]
+AutogradCPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:57 [backend fallback]
+AutogradCUDA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:65 [backend fallback]
+AutogradXLA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:69 [backend fallback]
+AutogradMPS: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:77 [backend fallback]
+AutogradXPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:61 [backend fallback]
+AutogradHPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:90 [backend fallback]
+AutogradLazy: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:73 [backend fallback]
+AutogradMeta: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:81 [backend fallback]
+Tracer: registered at C:\cb\pytorch_1000000000000\work\torch\csrc\autograd\TraceTypeManual.cpp:297 [backend fallback]
+AutocastCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:34 [kernel]
+AutocastCUDA: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:27 [kernel]
+FuncTorchBatched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:731 [backend fallback]
+BatchedNestedTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:758 [backend fallback]
+FuncTorchVmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\VmapModeRegistrations.cpp:27 [backend fallback]
+Batched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\LegacyBatchingRegistrations.cpp:1075 [backend fallback]
+VmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\VmapModeRegistrations.cpp:33 [backend fallback]
+FuncTorchGradWrapper: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\TensorWrapper.cpp:202 [backend fallback]
+PythonTLSSnapshot: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:162 [backend fallback]
+FuncTorchDynamicLayerFrontMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:493 [backend fallback]
+PreDispatch: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:166 [backend fallback]
+PythonDispatcher: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:158 [backend fallback]
+
+2025-04-19 11:55:18,529 - TomatoDetector.ModelThread - INFO - 尝试使用CPU模式重新运行模型...
+2025-04-19 11:55:18,652 - TomatoDetector.ModelThread - INFO - 检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 11:55:18,652 - TomatoDetector.Window - INFO - 收到检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 11:55:18,652 - TomatoDetector.Window - DEBUG - 正在显示处理后的图片
+2025-04-19 11:55:18,652 - TomatoDetector.Window - DEBUG - 处理OpenCV格式的图像结果
+2025-04-19 11:55:18,652 - TomatoDetector.Window - DEBUG - 图像尺寸: 257x196, 通道数: 3
+2025-04-19 11:55:18,652 - TomatoDetector.Window - DEBUG - OpenCV图像转换为QPixmap成功
+2025-04-19 11:55:18,653 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:55:18,654 - TomatoDetector.Window - INFO - 检测流程完成
+2025-04-19 11:55:18,654 - TomatoDetector.Window - DEBUG - 检测线程已完成
+2025-04-19 11:55:34,514 - TomatoDetector.Window - INFO - 开始番茄检测 - 模型: C:/Users/to/Desktop/best.pt, 图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:55:34,515 - TomatoDetector.Window - DEBUG - 检测线程已启动，进度条更新到50%
+2025-04-19 11:55:34,515 - TomatoDetector.ModelThread - INFO - 开始加载模型: C:/Users/to/Desktop/best.pt
+2025-04-19 11:55:34,515 - TomatoDetector.ModelThread - INFO - 导入YOLO模型成功
+2025-04-19 11:55:34,539 - TomatoDetector.ModelThread - INFO - 模型加载成功: <class 'ultralytics.models.yolo.model.YOLO'>
+2025-04-19 11:55:34,540 - TomatoDetector.ModelThread - INFO - CUDA是否可用: True
+2025-04-19 11:55:34,540 - TomatoDetector.ModelThread - INFO - CUDA设备: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 11:55:34,540 - TomatoDetector.ModelThread - INFO - PyTorch CUDA版本: 12.1
+2025-04-19 11:55:34,540 - TomatoDetector.ModelThread - INFO - 开始处理图像: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 11:55:34,540 - TomatoDetector.ModelThread - INFO - 使用指定设备 'cuda:0' 进行推理
+2025-04-19 11:55:34,864 - TomatoDetector.ModelThread - ERROR - CUDA版本与PyTorch不兼容，请尝试使用CPU模式: Could not run 'torchvision::nms' with arguments from the 'CUDA' backend. This could be because the operator doesn't exist for this backend, or was omitted during the selective/custom build process (if using custom build). If you are a Facebook employee using PyTorch on mobile, please visit https://fburl.com/ptmfixes for possible resolutions. 'torchvision::nms' is only available for these backends: [CPU, Meta, QuantizedCPU, BackendSelect, Python, FuncTorchDynamicLayerBackMode, Functionalize, Named, Conjugate, Negative, ZeroTensor, ADInplaceOrView, AutogradOther, AutogradCPU, AutogradCUDA, AutogradXLA, AutogradMPS, AutogradXPU, AutogradHPU, AutogradLazy, AutogradMeta, Tracer, AutocastCPU, AutocastCUDA, FuncTorchBatched, BatchedNestedTensor, FuncTorchVmapMode, Batched, VmapMode, FuncTorchGradWrapper, PythonTLSSnapshot, FuncTorchDynamicLayerFrontMode, PreDispatch, PythonDispatcher].
+
+CPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\cpu\nms_kernel.cpp:112 [kernel]
+Meta: registered at /dev/null:467 [kernel]
+QuantizedCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\quantized\cpu\qnms_kernel.cpp:124 [kernel]
+BackendSelect: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\BackendSelectFallbackKernel.cpp:3 [backend fallback]
+Python: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:154 [backend fallback]
+FuncTorchDynamicLayerBackMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:497 [backend fallback]
+Functionalize: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\FunctionalizeFallbackKernel.cpp:324 [backend fallback]
+Named: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\NamedRegistrations.cpp:7 [backend fallback]
+Conjugate: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ConjugateFallback.cpp:17 [backend fallback]
+Negative: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\NegateFallback.cpp:18 [backend fallback]
+ZeroTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ZeroTensorFallback.cpp:86 [backend fallback]
+ADInplaceOrView: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:86 [backend fallback]
+AutogradOther: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:53 [backend fallback]
+AutogradCPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:57 [backend fallback]
+AutogradCUDA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:65 [backend fallback]
+AutogradXLA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:69 [backend fallback]
+AutogradMPS: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:77 [backend fallback]
+AutogradXPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:61 [backend fallback]
+AutogradHPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:90 [backend fallback]
+AutogradLazy: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:73 [backend fallback]
+AutogradMeta: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:81 [backend fallback]
+Tracer: registered at C:\cb\pytorch_1000000000000\work\torch\csrc\autograd\TraceTypeManual.cpp:297 [backend fallback]
+AutocastCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:34 [kernel]
+AutocastCUDA: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:27 [kernel]
+FuncTorchBatched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:731 [backend fallback]
+BatchedNestedTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:758 [backend fallback]
+FuncTorchVmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\VmapModeRegistrations.cpp:27 [backend fallback]
+Batched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\LegacyBatchingRegistrations.cpp:1075 [backend fallback]
+VmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\VmapModeRegistrations.cpp:33 [backend fallback]
+FuncTorchGradWrapper: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\TensorWrapper.cpp:202 [backend fallback]
+PythonTLSSnapshot: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:162 [backend fallback]
+FuncTorchDynamicLayerFrontMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:493 [backend fallback]
+PreDispatch: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:166 [backend fallback]
+PythonDispatcher: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:158 [backend fallback]
+Traceback (most recent call last):
+  File "C:\Users\to\PycharmProjects\PythonProject\tomato_detector.py", line 62, in run
+    results = model(self.image_path, device=self.device)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\model.py", line 182, in __call__
+    return self.predict(source, stream, **kwargs)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    return self.predictor.predict_cli(source=source) if is_cli else self.predictor(source=source, stream=stream)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\predictor.py", line 216, in __call__
+    return list(self.stream_inference(source, model, *args, **kwargs))  # merge list of Result into one
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\torch\utils\_contextlib.py", line 35, in generator_context
+    response = gen.send(None)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\engine\predictor.py", line 332, in stream_inference
+    self.results = self.postprocess(preds, im, im0s)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\models\yolo\detect\predict.py", line 54, in postprocess
+    preds = ops.non_max_suppression(
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\ultralytics\utils\ops.py", line 312, in non_max_suppression
+    i = torchvision.ops.nms(boxes, scores, iou_thres)  # NMS
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\torchvision\ops\boxes.py", line 41, in nms
+    return torch.ops.torchvision.nms(boxes, scores, iou_threshold)
+  File "D:\tools\Miniconda3\envs\yolo\lib\site-packages\torch\_ops.py", line 854, in __call__
+    return self_._op(*args, **(kwargs or {}))
+NotImplementedError: Could not run 'torchvision::nms' with arguments from the 'CUDA' backend. This could be because the operator doesn't exist for this backend, or was omitted during the selective/custom build process (if using custom build). If you are a Facebook employee using PyTorch on mobile, please visit https://fburl.com/ptmfixes for possible resolutions. 'torchvision::nms' is only available for these backends: [CPU, Meta, QuantizedCPU, BackendSelect, Python, FuncTorchDynamicLayerBackMode, Functionalize, Named, Conjugate, Negative, ZeroTensor, ADInplaceOrView, AutogradOther, AutogradCPU, AutogradCUDA, AutogradXLA, AutogradMPS, AutogradXPU, AutogradHPU, AutogradLazy, AutogradMeta, Tracer, AutocastCPU, AutocastCUDA, FuncTorchBatched, BatchedNestedTensor, FuncTorchVmapMode, Batched, VmapMode, FuncTorchGradWrapper, PythonTLSSnapshot, FuncTorchDynamicLayerFrontMode, PreDispatch, PythonDispatcher].
+
+CPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\cpu\nms_kernel.cpp:112 [kernel]
+Meta: registered at /dev/null:467 [kernel]
+QuantizedCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\quantized\cpu\qnms_kernel.cpp:124 [kernel]
+BackendSelect: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\BackendSelectFallbackKernel.cpp:3 [backend fallback]
+Python: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:154 [backend fallback]
+FuncTorchDynamicLayerBackMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:497 [backend fallback]
+Functionalize: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\FunctionalizeFallbackKernel.cpp:324 [backend fallback]
+Named: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\NamedRegistrations.cpp:7 [backend fallback]
+Conjugate: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ConjugateFallback.cpp:17 [backend fallback]
+Negative: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\NegateFallback.cpp:18 [backend fallback]
+ZeroTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\ZeroTensorFallback.cpp:86 [backend fallback]
+ADInplaceOrView: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:86 [backend fallback]
+AutogradOther: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:53 [backend fallback]
+AutogradCPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:57 [backend fallback]
+AutogradCUDA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:65 [backend fallback]
+AutogradXLA: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:69 [backend fallback]
+AutogradMPS: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:77 [backend fallback]
+AutogradXPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:61 [backend fallback]
+AutogradHPU: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:90 [backend fallback]
+AutogradLazy: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:73 [backend fallback]
+AutogradMeta: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\VariableFallbackKernel.cpp:81 [backend fallback]
+Tracer: registered at C:\cb\pytorch_1000000000000\work\torch\csrc\autograd\TraceTypeManual.cpp:297 [backend fallback]
+AutocastCPU: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:34 [kernel]
+AutocastCUDA: registered at C:\actions-runner\_work\vision\vision\pytorch\vision\torchvision\csrc\ops\autocast\nms_kernel.cpp:27 [kernel]
+FuncTorchBatched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:731 [backend fallback]
+BatchedNestedTensor: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\LegacyBatchingRegistrations.cpp:758 [backend fallback]
+FuncTorchVmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\VmapModeRegistrations.cpp:27 [backend fallback]
+Batched: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\LegacyBatchingRegistrations.cpp:1075 [backend fallback]
+VmapMode: fallthrough registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\VmapModeRegistrations.cpp:33 [backend fallback]
+FuncTorchGradWrapper: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\TensorWrapper.cpp:202 [backend fallback]
+PythonTLSSnapshot: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:162 [backend fallback]
+FuncTorchDynamicLayerFrontMode: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\functorch\DynamicLayer.cpp:493 [backend fallback]
+PreDispatch: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:166 [backend fallback]
+PythonDispatcher: registered at C:\cb\pytorch_1000000000000\work\aten\src\ATen\core\PythonFallbackKernel.cpp:158 [backend fallback]
+
+2025-04-19 11:55:34,869 - TomatoDetector.ModelThread - INFO - 尝试使用CPU模式重新运行模型...
+2025-04-19 11:55:34,989 - TomatoDetector.ModelThread - INFO - 检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 11:55:34,989 - TomatoDetector.Window - INFO - 收到检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 11:55:34,989 - TomatoDetector.Window - DEBUG - 正在显示处理后的图片
+2025-04-19 11:55:34,989 - TomatoDetector.Window - DEBUG - 处理OpenCV格式的图像结果
+2025-04-19 11:55:34,989 - TomatoDetector.Window - DEBUG - 图像尺寸: 257x196, 通道数: 3
+2025-04-19 11:55:34,990 - TomatoDetector.Window - DEBUG - OpenCV图像转换为QPixmap成功
+2025-04-19 11:55:34,990 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 11:55:34,991 - TomatoDetector.Window - INFO - 检测流程完成
+2025-04-19 11:55:34,991 - TomatoDetector.Window - DEBUG - 检测线程已完成
+2025-04-19 11:55:46,384 - TomatoDetector.Main - INFO - 应用程序结束，退出代码: 0
+2025-04-19 12:27:44,343 - TomatoDetector.Main - INFO - 番茄检测应用程序启动
+2025-04-19 12:27:44,343 - TomatoDetector.Main - INFO - PyTorch版本: 2.3.0
+2025-04-19 12:27:44,372 - TomatoDetector.Main - INFO - CUDA是否可用: True
+2025-04-19 12:27:44,372 - TomatoDetector.Main - INFO - CUDA版本: 12.1
+2025-04-19 12:27:44,373 - TomatoDetector.Main - INFO - CUDA设备数量: 1
+2025-04-19 12:27:44,374 - TomatoDetector.Main - INFO - 当前CUDA设备: 0
+2025-04-19 12:27:44,374 - TomatoDetector.Main - INFO - CUDA设备名称: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 12:27:44,420 - TomatoDetector.Window - INFO - 初始化番茄检测器窗口
+2025-04-19 12:27:44,420 - TomatoDetector.Window - DEBUG - UI初始化
+2025-04-19 12:27:44,444 - TomatoDetector.Window - DEBUG - UI初始化完成
+2025-04-19 12:27:44,739 - TomatoDetector.Main - INFO - 应用程序主窗口显示
+2025-04-19 12:27:47,682 - TomatoDetector.Window - INFO - 设备设置为: 仅CPU
+2025-04-19 12:27:48,224 - TomatoDetector.Window - INFO - 开始加载模型
+2025-04-19 12:27:51,012 - TomatoDetector.Window - INFO - 已选择模型: C:/Users/to/Desktop/best.pt
+2025-04-19 12:27:51,012 - TomatoDetector.Window - DEBUG - 禁用检测按钮 - 缺少模型或图片
+2025-04-19 12:27:55,497 - TomatoDetector.Window - INFO - 开始加载图片
+2025-04-19 12:27:57,013 - TomatoDetector.Window - INFO - 已选择图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 12:27:57,013 - TomatoDetector.Window - DEBUG - 正在显示原始图片
+2025-04-19 12:27:57,016 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 12:27:57,017 - TomatoDetector.Window - DEBUG - 启用检测按钮
+2025-04-19 12:27:58,465 - TomatoDetector.Window - INFO - 开始番茄检测 - 模型: C:/Users/to/Desktop/best.pt, 图片: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 12:27:58,469 - TomatoDetector.Window - DEBUG - 检测线程已启动，进度条更新到50%
+2025-04-19 12:27:58,469 - TomatoDetector.ModelThread - INFO - 开始加载模型: C:/Users/to/Desktop/best.pt
+2025-04-19 12:27:58,517 - matplotlib - DEBUG - CACHEDIR=C:\Users\to\.matplotlib
+2025-04-19 12:27:58,520 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\to\.matplotlib\fontlist-v390.json
+2025-04-19 12:27:59,622 - TomatoDetector.ModelThread - INFO - 导入YOLO模型成功
+2025-04-19 12:27:59,649 - TomatoDetector.ModelThread - INFO - 模型加载成功: <class 'ultralytics.models.yolo.model.YOLO'>
+2025-04-19 12:27:59,649 - TomatoDetector.ModelThread - INFO - CUDA是否可用: True
+2025-04-19 12:27:59,649 - TomatoDetector.ModelThread - INFO - CUDA设备: NVIDIA GeForce RTX 4070 Laptop GPU
+2025-04-19 12:27:59,649 - TomatoDetector.ModelThread - INFO - PyTorch CUDA版本: 12.1
+2025-04-19 12:27:59,649 - TomatoDetector.ModelThread - INFO - 开始处理图像: C:/Users/to/Desktop/images (1).jpg
+2025-04-19 12:27:59,649 - TomatoDetector.ModelThread - INFO - 使用指定设备 'cpu' 进行推理
+2025-04-19 12:28:00,484 - TomatoDetector.ModelThread - INFO - 图像处理完成，获取结果: <class 'list'> 数量: 1
+2025-04-19 12:28:00,484 - TomatoDetector.ModelThread - DEBUG - 处理结果 1/1
+2025-04-19 12:28:00,484 - TomatoDetector.ModelThread - DEBUG - 找到 2 个检测框
+2025-04-19 12:28:00,484 - TomatoDetector.ModelThread - DEBUG - 检测框 1: 类别ID=0, 置信度=0.7454
+2025-04-19 12:28:00,484 - TomatoDetector.ModelThread - DEBUG - 模型类别映射: {0: 'tomato', 1: 'green tomato'}
+2025-04-19 12:28:00,484 - TomatoDetector.ModelThread - DEBUG - 类别ID为0，识别为番茄
+2025-04-19 12:28:00,484 - TomatoDetector.ModelThread - DEBUG - 更新最高置信度: 0.7454
+2025-04-19 12:28:00,484 - TomatoDetector.ModelThread - DEBUG - 检测框 2: 类别ID=0, 置信度=0.6974
+2025-04-19 12:28:00,485 - TomatoDetector.ModelThread - DEBUG - 模型类别映射: {0: 'tomato', 1: 'green tomato'}
+2025-04-19 12:28:00,485 - TomatoDetector.ModelThread - DEBUG - 类别ID为0，识别为番茄
+2025-04-19 12:28:00,545 - TomatoDetector.ModelThread - INFO - 开始生成结果图像
+2025-04-19 12:28:00,546 - TomatoDetector.ModelThread - INFO - 结果图像生成成功: 形状=(196, 257, 3)
+2025-04-19 12:28:00,546 - TomatoDetector.ModelThread - INFO - 检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 12:28:00,546 - TomatoDetector.Window - INFO - 收到检测结果: 检测到番茄! 置信度: 0.75
+2025-04-19 12:28:00,546 - TomatoDetector.Window - DEBUG - 正在显示处理后的图片
+2025-04-19 12:28:00,546 - TomatoDetector.Window - DEBUG - 处理OpenCV格式的图像结果
+2025-04-19 12:28:00,546 - TomatoDetector.Window - DEBUG - 图像尺寸: 257x196, 通道数: 3
+2025-04-19 12:28:00,546 - TomatoDetector.Window - DEBUG - OpenCV图像转换为QPixmap成功
+2025-04-19 12:28:00,547 - TomatoDetector.Window - DEBUG - 图像显示成功
+2025-04-19 12:28:00,552 - TomatoDetector.Window - INFO - 检测流程完成
+2025-04-19 12:28:00,552 - TomatoDetector.Window - DEBUG - 检测线程已完成
+2025-04-19 12:28:02,715 - TomatoDetector.Main - INFO - 应用程序结束，退出代码: 0

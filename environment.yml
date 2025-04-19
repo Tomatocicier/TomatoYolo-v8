@@ -1,0 +1,16 @@
+name: tomato-detector
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch=1.12.1
+  - torchvision=0.13.1
+  - cudatoolkit=11.6  # 如果需要CUDA支持，请确保版本兼容
+  - pyqt=5.15.6
+  - pip=21.3.1
+  - numpy=1.23.5
+  - opencv=4.6.0
+  - pip:
+    - ultralytics>=8.0.0
