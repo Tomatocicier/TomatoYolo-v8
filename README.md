@@ -14,3 +14,6 @@
 
 ```bash
 pip install -r requirements.txt
+
+conda：
+使用 install_conda.bat/sh
